@@ -17,10 +17,21 @@
     foreach($array as $key => $value) {
         if(is_array($value)) {
             foreach($value as $key2 => $value2) {
-                echo "[",$key,"]"," [",$key2,"]"," => ",$value2,"\n";
+                echo "[$key] [$key2] => $value2\n";
             }
         } else {
-            echo "[",$key,"]"," => ",$value,"\n";
+            echo "[$key]"," => ",$value,"\n";
+        }
+    }
+
+    //  4e
+    for($i=0; $i<count($array); $i++) {
+        if (is_array($array[$i])) {
+            for($j= 0; $j<count($array[$i]); $j++) {
+                echo "[$i] [$j] => ", $array[$i][$j],"\n";
+            }
+        }else {
+            echo "[$i] => ", $array[$i], "\n";
         }
     }
 ?>
