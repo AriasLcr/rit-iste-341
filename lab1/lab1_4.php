@@ -12,7 +12,7 @@
 
     /**
      * In here, I'm using is_array in order to avoid having to add 18 into
-     * another array and match the provided output.
+     * another array and match the provided output. I had to look up the doc for is_array
      */
     foreach($array as $key => $value) {
         if(is_array($value)) {
@@ -32,6 +32,26 @@
             }
         }else {
             echo "[$i] => ", $array[$i], "\n";
+        }
+    }
+
+    // 4f & 4g
+    $array2 = [
+        'name' => [
+            'first' => 'Gabriel',
+            'last' => 'Arias',
+        ],
+        'address' => [
+            'street'=> '123 Main St',
+            'city' => 'Rochester',
+            'state' => 'New York',
+            'zip' => '14623'
+        ]
+    ];
+
+    foreach($array2 as $key => $value) {
+        foreach($value as $key2 => $value2) {
+            echo "[$key] [$key2] : ", $array2[$key][$key2],"\n";
         }
     }
 ?>
