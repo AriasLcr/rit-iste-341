@@ -5,5 +5,5 @@
         $total_score += $score;
     }
     $average = $total_score / count($scores);
-    echo "The average score is: $average\n";
+    echo "The average score is: $average<br/>";
 ?>

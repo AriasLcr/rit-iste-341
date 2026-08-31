@@ -1,10 +1,10 @@
 <?php
     // 4a & 4b
     $array = array(array(1,2,3,4,5), array(6,7,8,9,10), array(11,12,13));
-    echo "4a & 4b\n";
-    echo "The element with value of 8: ",$array[1][2]," and its indexes are: [1][2].\n\n";
+    echo "4a & 4b<br/>";
+    echo "The element with value of 8: ",$array[1][2]," and its indexes are: [1][2].<br/><br/>";
     
-    echo "4c & 4d\n";
+    echo "4c & 4d<br/>";
 
     // 4c & 4d
     $array[2][] = 14;
@@ -19,28 +19,28 @@
     foreach($array as $key => $value) {
         if(is_array($value)) {
             foreach($value as $key2 => $value2) {
-                echo "[$key] [$key2] => $value2\n";
+                echo "[$key] [$key2] => $value2<br/>";
             }
         } else {
-            echo "[$key]"," => ",$value,"\n";
+            echo "[$key]"," => ",$value,"<br/>";
         }
     }
-    echo "\n\n";
-    echo "4e\n";
+    echo "<br/><br/>";
+    echo "4e<br/>";
 
     //  4e
     for($i=0; $i<count($array); $i++) {
         if (is_array($array[$i])) {
             for($j= 0; $j<count($array[$i]); $j++) {
-                echo "[$i] [$j] => ", $array[$i][$j],"\n";
+                echo "[$i] [$j] => ", $array[$i][$j],"<br/>";
             }
         }else {
-            echo "[$i] => ", $array[$i], "\n";
+            echo "[$i] => ", $array[$i], "<br/>";
         }
     }
 
-    echo "\n\n";
-    echo "4f & 4g\n";
+    echo "<br/><br/>";
+    echo "4f & 4g<br/>";
 
     // 4f & 4g
     $array2 = [
@@ -58,12 +58,12 @@
 
     foreach($array2 as $key => $value) {
         foreach($value as $key2 => $value2) {
-            echo "[$key] [$key2] : ", $array2[$key][$key2],"\n";
+            echo "[$key] [$key2] : ", $array2[$key][$key2],"<br/>";
         }
     }
 
-    echo "\n\n";
-    echo "4h & 4i\n";
+    echo "<br/><br/>";
+    echo "4h & 4i<br/>";
 
     // 4h and 4i
     $array2["name"]["middle"] = "none";
@@ -76,14 +76,14 @@
             foreach($value as $key2 => $value2) {
                 if (is_array($value2)) {
                     foreach($value2 as $key3 => $value3) {
-                        echo "[$key] [$key2] [$key3] : ", $array2[$key][$key2][$key3],"\n";
+                        echo "[$key] [$key2] [$key3] : ", $array2[$key][$key2][$key3],"<br/>";
                     }
                 } else {
-                    echo "[$key] [$key2] : ", $array2[$key][$key2],"\n";
+                    echo "[$key] [$key2] : ", $array2[$key][$key2],"<br/>";
                 }
             }
         } else {
-            echo "[$key] [$key2] : ", $array2[$key][$key2],"\n";
+            echo "[$key] [$key2] : ", $array2[$key][$key2],"<br/>";
         }
     }
 ?>
